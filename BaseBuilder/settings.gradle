@@ -1,0 +1,1 @@
+include ':app', ':baseBuilder', ':fastPay', ':fastImgLoad-glide', ':fastShare', ':fastWx'

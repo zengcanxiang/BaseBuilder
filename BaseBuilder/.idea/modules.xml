@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BaseBuilder.iml" filepath="$PROJECT_DIR$/BaseBuilder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/baseBuilder/baseBuilder.iml" filepath="$PROJECT_DIR$/baseBuilder/baseBuilder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fastImgLoad-glide/fastImgLoad-glide.iml" filepath="$PROJECT_DIR$/fastImgLoad-glide/fastImgLoad-glide.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fastPay/fastPay.iml" filepath="$PROJECT_DIR$/fastPay/fastPay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fastShare/fastShare.iml" filepath="$PROJECT_DIR$/fastShare/fastShare.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fastWx/fastWx.iml" filepath="$PROJECT_DIR$/fastWx/fastWx.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="目标场景" />
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/target_scene_session"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="会话" />
+
+                <RadioButton
+                    android:id="@+id/target_scene_timeline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="朋友圈" />
+
+                <RadioButton
+                    android:id="@+id/target_scene_favorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="收藏" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/send_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="shareText"
+                android:text="发送文本" />
+
+            <Button
+                android:id="@+id/send_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="shareImg"
+                android:text="发送图片" />
+
+            <Button
+                android:id="@+id/send_music"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="shareMusic"
+                android:text="发送音乐" />
+
+            <Button
+                android:id="@+id/send_video"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="shareVideoUrl"
+                android:text="发送视频" />
+
+            <Button
+                android:id="@+id/send_webpage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="shareWebUrl"
+                android:text="发送网页" />
+
+            <Button
+                android:id="@+id/send_appbrand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="shareMiniProgram"
+                android:text="发送小程序" />
+
+            <Button
+                android:id="@+id/send_emoji"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="shareEmoji"
+                android:text="发送表情" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

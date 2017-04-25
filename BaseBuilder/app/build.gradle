@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "cn.zengcanxiang.baseBuilderSample"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+        config {
+            storeFile file("aneKey")
+            storePassword "aneane"
+            keyAlias "anekey"
+            keyPassword "aneane"
+        }
+    }
+    buildTypes {
+        debug {
+            debuggable true
+            //debug时使用release签名
+            signingConfig signingConfigs.config
+            //Zip代码压缩优化
+            zipAlignEnabled true
+            //代码混淆
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            debuggable false
+            //release时使用release签名
+            signingConfig signingConfigs.config
+            //Zip代码压缩优化
+            zipAlignEnabled true
+            //代码混淆
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:1.1.6'
+    testCompile 'junit:junit:4.12'
+    compile project(':fastPay')
+    compile project(':fastShare')
+    compile project(':fastWx')
+}
